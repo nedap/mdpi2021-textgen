@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+
+  jupyter:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: nedap/jupyter-privacy-questionnaire
+    command: ['start-notebook.sh', '--ip', '0.0.0.0', '--no-browser', "--NotebookApp.password=sha1:15aa6834121e:ef80bf4abb55a54b51282b685bf424ca8d04209c", "--NotebookApp.allow_origin=*", "--VoilaConfiguration.enable_nbextensions=True", "--MappingKernelManager.cull_interval=15", "--MappingKernelManager.cull_idle_timeout=120"]
+    ports:
+      - "8895:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work

@@ -1,0 +1,5 @@
+*
+!.gitignore
+!external/sectors.csv
+!external/dummy_data.csv
+!interim/annotated_dummy.jsonl

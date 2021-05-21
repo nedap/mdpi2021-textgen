@@ -1,0 +1,15 @@
+name: textgen-gpt2
+channels:
+  - conda-forge
+  - fastai
+  - pytorch
+dependencies:
+  - python=3.7.8
+  - pip=20.1.1
+  - pandas=1.0.5
+  - numpy=1.16.6
+  - fastai=2.1.5
+  - pip:
+    - tokenizers==0.9.4
+    - transformers==3.5.0
+    - torch==1.7.0
